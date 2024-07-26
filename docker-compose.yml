@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  rule-combiner:
+    build:
+      context: ./client/rule-combiner
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/usr/src/app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
