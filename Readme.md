@@ -28,15 +28,21 @@ Combine Rules: Users can combine multiple rules.
 
 ## Architecture and Design Choices
 
-### Frontend
+## Architecture and Design Choices
 
-React: A JavaScript library for building user interfaces.
-Serve: A static file serving and directory listing package.
+### Frontend
+- **React:** Utilized for building the user interface due to its component-based architecture, which promotes reusability and maintainability.
+- **Serve:** A static file serving and directory listing package used to serve the built React application in production.
 
 ### Dockerization
+- **Multi-Stage Build:** Implemented to optimize the Docker image size by separating the build and runtime environments. The first stage uses Node.js to build the application, and the second stage uses a lightweight image to serve the static files.
+- **Node.js:** Used for both the build stage and the runtime stage. In the build stage, Node.js compiles the React application, and in the runtime stage, it serves the static files using the `serve` package.
 
-Multi-Stage Build: Optimizes the image size by separating the build and runtime environments.
-Node.js: Used for both the build stage and the runtime stage.
+### Additional Design Choices
+- **Component-Based Architecture:** Ensures that each part of the user interface is modular and can be developed and tested independently.
+- **State Management:** Utilizes React's `useState` and `useEffect` hooks for managing component states and side effects, providing a smooth and dynamic user experience.
+- **Error Handling:** Implemented error boundaries and appropriate error handling mechanisms to ensure the application remains robust and provides useful feedback to the user.
+- **Responsive Design:** Ensures that the user interface is accessible and usable on a variety of devices, from desktops to mobile phones.
 
 ## Dependencies
 
