@@ -28,8 +28,6 @@ Combine Rules: Users can combine multiple rules.
 
 ## Architecture and Design Choices
 
-## Architecture and Design Choices
-
 ### Frontend
 - **React:** Utilized for building the user interface due to its component-based architecture, which promotes reusability and maintainability.
 - **Serve:** A static file serving and directory listing package used to serve the built React application in production.
