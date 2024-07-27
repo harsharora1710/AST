@@ -49,7 +49,7 @@ Docker Compose (optional): For orchestrating multi-container Docker applications
 
 ### Clone the Repository
 
-git clone https://github.com/your-username/rule-combiner.git
+git clone https://github.com/harsharora1710/rule-combiner.git
 cd rule-combiner
 
 ### Build the Docker Image
