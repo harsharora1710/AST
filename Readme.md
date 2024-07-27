@@ -64,9 +64,11 @@ docker build -t rule-combiner .
 
 docker run -p 3000:3000 rule-combiner
 
-Alternatively, if you are using Docker Compose, you can start the application with:
+### Alternatively, if you are using Docker Compose, you can start the application with:
 
 docker-compose up
+
+### You have to enter your MongoDB link in place of "YOUR_MONGO_URL".
 
 ### Access the Application
 
